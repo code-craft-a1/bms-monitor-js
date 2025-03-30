@@ -17,4 +17,4 @@ jobs:
         run:  npm install
       
       - name: Vitals monitor
-        run: node vitals-monitor.js
+        run: npx mocha --timeout 15000 vitals-monitor.test.mjs

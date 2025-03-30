@@ -5,6 +5,6 @@ import pluginJs from "@eslint/js";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {files: ["**/*.js"], languageOptions: {sourceType: "module"}},
-  {languageOptions: { globals: globals.browser }},
+  {languageOptions: { globals: {...globals.node, ...globals.mocha} }},
   pluginJs.configs.recommended,
 ];
